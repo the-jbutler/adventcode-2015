@@ -15,10 +15,10 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Challenge](http://adventofcode.com/day/1) - Not Quite Lisp
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day1/test-1.sh)
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day1/test-2.sh)
-2. Day 2 - TBC
+2. Day 2 - Python
   * [Challenge](http://adventofcode.com/day/2) - I Was Told There Would Be No Math
-  * [Task 1](#)
-  * [Task 2](#)
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day2/test-1.sh)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day2/test-2.sh)
 3. Day 3 - TBC
   * [Challenge](#)
   * [Task 1](#)
