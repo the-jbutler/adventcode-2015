@@ -17,8 +17,8 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day1/test-2.sh)
 2. Day 2 - Python
   * [Challenge](http://adventofcode.com/day/2) - I Was Told There Would Be No Math
-  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day2/test-1.sh)
-  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day2/test-2.sh)
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day2/task-1.py)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day2/task-2.py)
 3. Day 3 - TBC
   * [Challenge](#)
   * [Task 1](#)
