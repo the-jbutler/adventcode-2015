@@ -21,8 +21,8 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day2/task-2.py)
 3. Day 3 - Perl5
   * [Challenge](http://adventofcode.com/day/3) - Perfectly Spherical Houses in a Vacuum
-  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day3/task-1.py)
-  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day3/task-2.py)
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day3/task-1.pl)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day3/task-2.pl)
 4. Day 4 - TBC
   * [Challenge](#)
   * [Task 1](#)
