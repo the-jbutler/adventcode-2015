@@ -19,10 +19,10 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Challenge](http://adventofcode.com/day/2) - I Was Told There Would Be No Math
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day2/task-1.py)
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day2/task-2.py)
-3. Day 3 - TBC
-  * [Challenge](#)
-  * [Task 1](#)
-  * [Task 2](#)
+3. Day 3 - Perl5
+  * [Challenge](http://adventofcode.com/day/3) - Perfectly Spherical Houses in a Vacuum
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day3/task-1.py)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day3/task-2.py)
 4. Day 4 - TBC
   * [Challenge](#)
   * [Task 1](#)
