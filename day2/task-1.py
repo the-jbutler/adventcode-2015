@@ -1,4 +1,4 @@
-#!/usr/local/opt/coreutils/libexec/gnubin/env python
+#!/usr/bin/env python
 
 import sys
 
