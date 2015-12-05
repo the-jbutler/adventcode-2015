@@ -1,4 +1,4 @@
-#!/usr/local/opt/coreutils/libexec/gnubin/env python
+#!/usr/bin/env python
 
 import sys
 import heapq
@@ -27,7 +27,6 @@ def getTotalArea(file):
 		line = line.rstrip()
 		dimens = splitDimens(line)
 		areas.append(calcRibbonArea(dimens))
-	print areas
 	return sum(areas)
 
 try:
