@@ -23,10 +23,10 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Challenge](http://adventofcode.com/day/3) - Perfectly Spherical Houses in a Vacuum
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day3/task-1.pl)
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day3/task-2.pl)
-4. Day 4 - TBC
-  * [Challenge](#)
-  * [Task 1](#)
-  * [Task 2](#)
+4. Day 4 - Erlang
+  * [Challenge](http://adventofcode.com/day/4) - The Ideal Stocking Stuffer
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-1.erl)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-2.erl)
 5. Day 5 - TBC
   * [Challenge](#)
   * [Task 1](#)

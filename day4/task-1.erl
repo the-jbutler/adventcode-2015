@@ -1,4 +1,4 @@
-#!/usr/bin/escript
+#!/usr/bin/escript -c
 -module(day41).
 -export([
 	main/1,
@@ -12,7 +12,7 @@ main(Args) when length(Args) == 1 ->
 	io:format("Valid Number ~p~n", [R]);
 main(Args) when length(Args) == 2 ->
 	[Passphrase|Tail] = Args,
-	[Cores|_] = Tail,
+	Cores = [ list_to_integer(T) || T <- Tail],
 	R = findNumber(Passphrase, Cores, Cores),
 	io:format("Valid Number ~p~n", [R]);
 main(_) ->
