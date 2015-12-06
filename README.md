@@ -29,8 +29,8 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-2.erl)
 5. Day 5 - Doesn't He Have Intern-Elves For This?
   * [Challenge](http://adventofcode.com/day/5)
-  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-1.js)
-  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-2.js)
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day5/task-1.js)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day5/task-2.js)
 6. Day 6 - TBC
   * [Challenge](#)
   * [Task 1](#)
