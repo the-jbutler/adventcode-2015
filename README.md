@@ -27,10 +27,10 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Challenge](http://adventofcode.com/day/4) - The Ideal Stocking Stuffer
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-1.erl)
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-2.erl)
-5. Day 5 - TBC
-  * [Challenge](#)
-  * [Task 1](#)
-  * [Task 2](#)
+5. Day 5 - Doesn't He Have Intern-Elves For This?
+  * [Challenge](http://adventofcode.com/day/5)
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-1.js)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day4/task-2.js)
 6. Day 6 - TBC
   * [Challenge](#)
   * [Task 1](#)
