@@ -31,10 +31,10 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Challenge](http://adventofcode.com/day/5) - Doesn't He Have Intern-Elves For This?
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day5/task-1.js)
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day5/task-2.js)
-6. Day 6 - TBC
-  * [Challenge](#)
-  * [Task 1](#)
-  * [Task 2](#)
+6. Day 6 - C#
+  * [Challenge](http://adventofcode.com/day/6)
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day6/task-1/Program.cs)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day6/task-2/Program.cs)
 7. Day 7 - TBC
   * [Challenge](#)
   * [Task 1](#)
