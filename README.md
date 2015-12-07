@@ -32,7 +32,7 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day5/task-1.js)
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day5/task-2.js)
 6. Day 6 - C#
-  * [Challenge](http://adventofcode.com/day/6)
+  * [Challenge](http://adventofcode.com/day/6) - Probably a Fire Hazard
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day6/task-1/Program.cs)
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day6/task-2/Program.cs)
 7. Day 7 - TBC
