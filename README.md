@@ -47,10 +47,9 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Challenge](#)
   * [Task 1](#)
   * [Task 2](#)
-10. Day 10 - TBC
-  * [Challenge](#)
-  * [Task 1](#)
-  * [Task 2](#)
+10. Day 10 - AWK
+  * [Challenge](http://adventofcode.com/day/10) - Elves Look, Elves Say
+  * [Task 1/2](https://github.com/hexpunK/adventcode-2015/blob/master/day10/task.awk)
 11. Day 11 - TBC
   * [Challenge](#)
   * [Task 1](#)
