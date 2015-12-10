@@ -28,28 +28,29 @@ let rec getValue (wires : Map<string, uint16>) key commands =
         match wires.TryFind key with
         | Some(x) -> wires
         | None -> processCommandWithTarget wires commands key commands
-and processCommandWithTarget wires commands target state =
+and processCommandWithTarget wires (commands : string list) target state =
     match state with
     | command::tail -> 
-        match command with
+        let parts = command.Split([|' '|],  System.StringSplitOptions.RemoveEmptyEntries) |> Seq.toList
+        match parts with
         // These three only work if they are for the target wire.
-        | (out, left, None, None) when out = target -> 
+        | [left; "->"; out] when out = target -> 
             // Handle normal assignments.
             let leftVal = getValue wires left commands
             leftVal.Add(out, leftVal.[left])
-        | (out, left, None, op) when out = target ->
+        | [op; left; "->"; out] when out = target ->
             // Handle urany operations (NOT, etc.)
             let leftVal = getValue wires left commands
-            let result = matchOp leftVal.[left] 0us op.Value
+            let result = matchOp leftVal.[left] 0us op
             leftVal.Add(out, result)
-        | (out, left, right, op) when out = target ->
+        | [left; op; right; "->"; out] when out = target ->
             // Handle binary operations (AND, OR, etc.)
             let leftVal = getValue wires left commands
-            let rightVal = getValue leftVal right.Value commands
-            let result = matchOp rightVal.[left] rightVal.[right.Value] op.Value
+            let rightVal = getValue leftVal right commands
+            let result = matchOp rightVal.[left] rightVal.[right] op
             rightVal.Add(out, result)
         // Continue building up the mapping of wires if this is not the target.
-        | (_, _, _, _) -> processCommandWithTarget wires commands target tail
+        | _ -> processCommandWithTarget wires commands target tail
     | [] -> Map.empty
 
 (*
@@ -73,15 +74,8 @@ let rec readLines lines =
     | head :: tail -> (lineToTuples head) :: readLines tail
     | [] -> []
 
-(*
-    Read the specified file, return a list of strings representing a line each.
-*)
-let readFile filePath = 
-    let lines = System.IO.File.ReadAllLines filePath |> Seq.toList
-    readLines lines
-
 // Perform one run to get our answer for this task.
 let args = fsi.CommandLineArgs
-let result = readFile args.[1]
+let result = System.IO.File.ReadAllLines args.[1] |> Seq.toList
 let r = processCommandWithTarget Map.empty result args.[2] result
 printfn "Value of wire %s: %d" args.[2] (r.TryFind args.[2]).Value
