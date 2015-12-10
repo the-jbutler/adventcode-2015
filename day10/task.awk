@@ -10,8 +10,10 @@ for (round = 1; round <= rounds; round++) {
 	result = "";
 	lastChar = "";
 	count = 0;
-	for (i = 1; i <= length(val); i++) {
-		curChar = substr(val, i, 1);
+	valLength = length(val);
+	for (i = 1; i <= valLength; i++) {
+		curChar = substr(val, 1, 1);
+		val = substr(val, 2)
 		if (curChar == lastChar) {
 			count++;
 		} else {
@@ -21,7 +23,7 @@ for (round = 1; round <= rounds; round++) {
 			lastChar = curChar;
 			count = 1;
 		}
-		printf("Complete: %d%%\r", (i/length(val))*100)
+		printf("Complete: %d%%\r", (i/valLength)*100)
 	}
 	result = sprintf("%s%s%s", result, count, lastChar)
 	printf("Length of result for round %d: %d\n", round, length(result))
