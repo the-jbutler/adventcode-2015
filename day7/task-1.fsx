@@ -14,15 +14,16 @@ let rec getValue (wires : Map<string, uint16>) key commands =
     try
         let tmp = uint16 key
         printfn "Found: %d" tmp
-        tmp
+        let out = wires.Add(key, tmp)
+        out
     with
     | _ -> 
         match wires.TryFind(key) with
-        | Some(x) -> printfn "value!"; x
+        | Some(x) -> printfn "value!"; wires
         | None -> 
             printfn "No value :("
             let tmp = processCommandWithTarget wires commands key commands
-            getValue tmp key commands
+            tmp
 and processCommandWithTarget wires commands target state =
     match state with
     | command::tail -> 
@@ -31,38 +32,25 @@ and processCommandWithTarget wires commands target state =
         | (out, left, None, None) when out = target -> 
             printfn "Found target '%s'" target
             let leftVal = getValue wires left commands
-            let newWires = wires.Add(out, leftVal)
+            let newWires = leftVal.Add(out, leftVal.[left])
             newWires
         | (out, left, None, op) when out = target ->
             printfn "Found target '%s'" target
             let leftVal = getValue wires left commands
-            let result = matchOp leftVal 0us op.Value
-            let newWires = wires.Add(out, result)
+            let result = matchOp leftVal.[left] 0us op.Value
+            let newWires = leftVal.Add(out, result)
             newWires
         | (out, left, right, op) when out = target ->
             printfn "Found target '%s'" target
             let leftVal = getValue wires left commands
-            let rightVal = getValue wires right.Value commands
-            let result = matchOp leftVal rightVal op.Value
-            let newWires = wires.Add(out, result)
+            let rightVal = getValue leftVal right.Value commands
+            let result = matchOp rightVal.[left] rightVal.[right.Value] op.Value
+            let newWires = rightVal.Add(out, result)
             newWires
-            //processCommandWithTarget newWires commands target tail
         | (_, _, _, _) -> processCommandWithTarget wires commands target tail
     | [] -> Map.empty
 
-let processCommand commands =
-    match commands with
-    | command::tail -> 
-        match command with
-        | (out, left, None, None) -> 
-            []
-        | (out, left, None, op) ->
-            []
-        | (out, left, right, op) ->
-            []
-    | [] -> []
-
-let linesToTuples (line : string) = 
+let lineToTuples (line : string) = 
     let parts = line.Split([|' '|],  System.StringSplitOptions.RemoveEmptyEntries) |> Seq.toList
     match parts with
     | [a; "->"; b] -> 
@@ -76,7 +64,7 @@ let linesToTuples (line : string) =
 let rec readLines lines =
     match lines with
     | head :: tail -> 
-        (linesToTuples head) :: readLines tail
+        (lineToTuples head) :: readLines tail
     | [] -> []
 
 let readFile filePath = 
@@ -86,9 +74,7 @@ let readFile filePath =
 let args = fsi.CommandLineArgs
 let result = readFile args.[1]
 System.Console.ReadLine() |> ignore
-let r = processCommandWithTarget Map.empty result "dr" result
+let r = processCommandWithTarget Map.empty result args.[2] result
 
-printfn "%A" result
-
-//printfn "%s: %d" args.[2] (result.TryFind args.[2]).Value
-//let r = Map.fold (fun map k v -> printfn "%s:\t%d" k v) () result
+//printfn "%A" result
+printfn "%s: %d" args.[2] (r.TryFind args.[2]).Value
