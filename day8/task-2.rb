@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 $lines = Array.new
 if not ARGV.empty?
 	$fileName = ARGV[0]
