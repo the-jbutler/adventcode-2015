@@ -21,6 +21,7 @@ for (round = 1; round <= rounds; round++) {
 			lastChar = curChar;
 			count = 1;
 		}
+		printf("Complete: %d%%\r", (i/length(val))*100)
 	}
 	result = sprintf("%s%s%s", result, count, lastChar)
 	printf("Length of result for round %d: %d\n", round, length(result))
