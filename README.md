@@ -35,10 +35,10 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
   * [Challenge](http://adventofcode.com/day/6) - Probably a Fire Hazard
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day6/task-1/Program.cs)
   * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day6/task-2/Program.cs)
-7. Day 7 - TBC
-  * [Challenge](#)
-  * [Task 1](#)
-  * [Task 2](#)
+7. Day 7 - F#
+  * [Challenge](http://adventofcode.com/day/7) - Some Assembly Required
+  * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day7/task-1.fsx)
+  * [Task 2](https://github.com/hexpunK/adventcode-2015/blob/master/day7/task-2.fsx)
 8. Day 8 - TBC
   * [Challenge](#)
   * [Task 1](#)

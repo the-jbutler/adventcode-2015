@@ -14,12 +14,6 @@ let matchOp a b op : uint16 =
     | "NOT" -> ~~~a
     | _ -> raise(System.NotSupportedException("Unknown operation provided"))
 
-(*
-    Attempt to parse the provided value, if it cannot be parsed into a unint16
-    then attempt to find the value in the existing wires (a wire can only ever
-    be assigned once). Otherwise, attempt to calculate the value with the 
-    main processing function again.
-*)
 let rec getValue (wires : Map<string, uint16>) key commands =
     try
         wires.Add(key, uint16 key)
@@ -73,15 +67,15 @@ let rec readLines lines =
     | head :: tail -> (lineToTuples head) :: readLines tail
     | [] -> []
 
-(*
-    Read the specified file, return a list of strings representing a line each.
-*)
 let readFile filePath = 
     let lines = System.IO.File.ReadAllLines filePath |> Seq.toList
     readLines lines
 
-// Perform one run to get our answer for this task.
+// Perform one run to get our initial value for this task.
 let args = fsi.CommandLineArgs
 let result = readFile args.[1]
 let r = processCommandWithTarget Map.empty result args.[2] result
-printfn "Value of wire %s: %d" args.[2] (r.TryFind args.[2]).Value
+// Use the answer from the previous execution as a base for the new answer.
+let modified = Map.empty.Add(args.[3], r.[args.[2]])
+let r2 = processCommandWithTarget modified result args.[2] result
+printfn "Value of wire %s: %d" args.[2] (r2.TryFind args.[2]).Value
