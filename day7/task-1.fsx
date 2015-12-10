@@ -53,27 +53,6 @@ and processCommandWithTarget wires (commands : string list) target state =
         | _ -> processCommandWithTarget wires commands target tail
     | [] -> Map.empty
 
-(*
-    Parse a string into a tuple by breaking it down into a list of elements 
-    (delimited by ' ') and pattern matching that element list.
-*)
-let lineToTuples (line : string) = 
-    let parts = line.Split([|' '|],  System.StringSplitOptions.RemoveEmptyEntries) |> Seq.toList
-    match parts with
-    | [a; "->"; b] -> (b, a, None, None)
-    | [a; op; b; "->"; c] -> (c, a, Some(b), Some(op))
-    | ["NOT"; a; "->"; b] -> (b, a, None, Some("NOT"))
-    | _ -> raise(System.NotSupportedException("Could not process line"))
-
-(*
-    Convert a list of strings to a list of tuples representing the strings 
-    split on ' '.
-*)
-let rec readLines lines =
-    match lines with
-    | head :: tail -> (lineToTuples head) :: readLines tail
-    | [] -> []
-
 // Perform one run to get our answer for this task.
 let args = fsi.CommandLineArgs
 let result = System.IO.File.ReadAllLines args.[1] |> Seq.toList
