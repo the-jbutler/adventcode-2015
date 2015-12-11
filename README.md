@@ -50,6 +50,7 @@ Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new lan
 10. Day 10 - AWK
   * [Challenge](http://adventofcode.com/day/10) - Elves Look, Elves Say
   * [Task 1/2](https://github.com/hexpunK/adventcode-2015/blob/master/day10/task.awk)
+  * [Bonus](https://github.com/hexpunK/adventcode-2015/blob/master/day10/task.pl) - Rewrite in Perl 5 as the AWK version is too slow to actually complete task 2 in a timely manner.
 11. Day 11 - C
   * [Challenge](http://adventofcode.com/day/11) - Corporate Policy
   * [Task 1/2](https://github.com/hexpunK/adventcode-2015/blob/master/day11/task.c)
