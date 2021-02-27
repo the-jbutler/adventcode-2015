@@ -1,16 +1,16 @@
-#Advent Of Code (2015)
+# Advent Of Code (2015)
 
-##What Is This?
+## What Is This?
 This is my repository for the 2015 [Advent Of Code](http://adventofcode.com/) challenge. A set of 50 programming challenges spaced out over the 25 days leading up to Christmas. The general idea is you prove how much you suck by failing day two and never comitting anything new.
 
-##Yeah, But Why?
+## Yeah, But Why?
 Honestly, I can't give a single project my full attention for longer than a day any more and this is the most programmming I'll do in my spare time for a while. So boredom. Boredom is your answer.
 
-##What's The Plan (Fam)?
+## What's The Plan (Fam)?
 I was going to write these all in Bash because I hate myself. But I might take inspiration from a friend ([Profans' 
 Repo](https://github.com/profan/advent-of-code-2015/)) and try and use a new language for each day (that's 25 languages kids!). I don't think I actually *know* 25 languages mind.
 
-##Languages
+## Languages
 1. Day 1 - Bash
   * [Challenge](http://adventofcode.com/day/1) - Not Quite Lisp
   * [Task 1](https://github.com/hexpunK/adventcode-2015/blob/master/day1/test-1.sh)
